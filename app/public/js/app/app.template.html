@@ -1,0 +1,12 @@
+<!-- <h1>Hello Classifieds</h1> -->
+<div ng-repeat="classified in $ctrl.classifieds | filter:search | orderBy:sort" class="well">
+  <div class="media-left">
+    <img ng-src="{{classified.item_image}}" class="media-object">
+  </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{classified.description}}
+      </h4>
+    </div>
+
+</div>

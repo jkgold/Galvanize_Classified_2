@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <!--helps remove hash from url  -->
+  <base href="/">
+  <title>classifiedsAssessment</title>
+</head>
+<body>
+  <!-- universal header  -->
+  <header>
+    <h1>Galvanize Classifieds</h1>
+  </header>
+
+  <div id="page">
+    <ui-view></ui-view>
+  </div>
+  <!--universal footer  -->
+  <footer>
+    <h4>Jason Goldfarb @2017</h4>
+  </footer>
+  <!--angular  -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+  <!--ui-router  -->
+  <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
+
+  <!--app -->
+  <script src="/js/app/app.module.js"></script>
+  <script src="/js/app/app.config.js"></script>
+  <script src="/js/app/app.component.js"></script>
+
+
+</body>
+</html>
