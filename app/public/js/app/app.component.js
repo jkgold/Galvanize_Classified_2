@@ -13,10 +13,24 @@ function controller ($http) {
   //get classifieds from server store in variable
 
   vm.$onInit = onInit
+  vm.createClassified = createClassified
+
    function onInit() {
     $http.get('/classifieds').then(function (response) {
       vm.classifieds = response.data
       console.log(vm.classifieds);
+    })
+  }
+
+  //write a function that posts a classified
+  function createClassified(){
+    // console.log("am i in function");
+    console.log(vm.classified);
+    $http.post('/classifieds', vm.classified).then(response => {
+      response.data.addclassifieds = []
+      vm.classifieds.push(response.data)
+      console.log(vm.classifieds);
+
     })
   }
 }

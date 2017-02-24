@@ -8,5 +8,20 @@
         {{classified.description}}
       </h4>
     </div>
-
 </div>
+<!--write the template for post  -->
+<h1>submit a post</h1>
+<form >
+  <div>
+    <label for="description">Description</label>
+    <input class="form-control" name="description" required ng-model="$ctrl.classified.description">
+  </div><br><br>
+  <div>
+    <label>Image URL</label>
+    <input class="form-control" name="item_image" required ng-model='$ctrl.classified.item_image'>
+  </div>
+  <div class="form-group">
+    <button type="submit" ng-click="$ctrl.createClassified()" class="btn btn-primary" ng-disabled="form.$invalid">Submit Classified
+    </button>
+  </div>
+</form>
