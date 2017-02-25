@@ -1,4 +1,5 @@
 <!-- <h1>Hello Classifieds</h1> -->
+<!--https://i5.walmartimages.com/asr/01f0ee2e-a571-4d10-a64d-af339c8e6634_1.9202a63f6fe0eb46ac722f46a0194  -->
 <div ng-repeat="classified in $ctrl.classifieds | filter:search | orderBy:sort" class="well">
   <div class="media-left">
     <img ng-src="{{classified.item_image}}" class="media-object">
@@ -8,6 +9,16 @@
         {{classified.description}}
       </h4>
     </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{classified.title}}
+      </h4>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{classified.price}}
+      </h4>
+    </div>
 </div>
 <!--write the template for post  -->
 <h1>submit a post</h1>
@@ -15,11 +26,20 @@
   <div>
     <label for="description">Description</label>
     <input class="form-control" name="description" required ng-model="$ctrl.classified.description">
-  </div><br><br>
+  </div><br>
   <div>
     <label>Image URL</label>
     <input class="form-control" name="item_image" required ng-model='$ctrl.classified.item_image'>
+  </div><br>
+  <div>
+    <label>Title</label>
+    <input class="form-control" name="title" required ng-model='$ctrl.classified.title'>
+  </div><br>
+  <div>
+    <label>Price</label>
+    <input class="form-control" name="price" required ng-model='$ctrl.classified.price'>
   </div>
+
   <div class="form-group">
     <button type="submit" ng-click="$ctrl.createClassified()" class="btn btn-primary" ng-disabled="form.$invalid">Submit Classified
     </button>

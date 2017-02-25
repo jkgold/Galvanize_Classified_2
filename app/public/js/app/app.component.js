@@ -31,7 +31,7 @@ function controller ($http) {
       vm.classifieds.push(response.data)
       console.log(vm.classifieds);
 
-    })
+  })
   }
 }
 }());
