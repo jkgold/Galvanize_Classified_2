@@ -25,7 +25,7 @@
 <hr>
 <!-- <h1>Hello Classifieds</h1> -->
 <!--https://i5.walmartimages.com/asr/01f0ee2e-a571-4d10-a64d-af339c8e6634_1.9202a63f6fe0eb46ac722f46a0194  -->
-<div ng-repeat="classified in $ctrl.classifieds | filter:search | orderBy:sort" class="well">
+ <div ng-repeat="classified in $ctrl.classifieds | filter:search | orderBy:sort" class="well">
 
   <div class="media-body">
     <h4 class="media-heading"></h4>
@@ -44,11 +44,3 @@
     <div class="media-left">
       <img ng-src="{{classified.item_image}}" class="media-object">
     </div>
-<!--write the template for post  -->
-  <!-- <h1>Classified Edit</h1>
-  <form action="POST">
-    <label for="name"></label>
-    <input type="classifiedInput" type ="text" name="classified">
-    <button id="editButton" type="button" name="button">EDIT</button>
-    <button id="deleteButton" type="button" name="button">DELETE</button>
-  </form> -->
