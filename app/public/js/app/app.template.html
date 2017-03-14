@@ -1,27 +1,3 @@
-<!-- <h1>Hello Classifieds</h1> -->
-<!--https://i5.walmartimages.com/asr/01f0ee2e-a571-4d10-a64d-af339c8e6634_1.9202a63f6fe0eb46ac722f46a0194  -->
-<div ng-repeat="classified in $ctrl.classifieds | filter:search | orderBy:sort" class="well">
-  <div class="media-left">
-    <img ng-src="{{classified.item_image}}" class="media-object">
-  </div>
-    <div class="media-body">
-      <h4 class="media-heading">{{classified.description}}</h4>
-      <a ui-sref="#">  {{classified.description}}</a>
-
-
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">
-        {{classified.title}}
-      </h4>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">
-        {{classified.price}}
-      </h4>
-    </div>
-</div>
-<!--write the template for post  -->
 <h1>submit a post</h1>
 <form >
   <div>
@@ -46,6 +22,31 @@
     </button>
   </div>
 </form>
+<hr>
+<!-- <h1>Hello Classifieds</h1> -->
+<!--https://i5.walmartimages.com/asr/01f0ee2e-a571-4d10-a64d-af339c8e6634_1.9202a63f6fe0eb46ac722f46a0194  -->
+<div ng-repeat="classified in $ctrl.classifieds | filter:search | orderBy:sort" class="well">
+  <div class="media-left">
+    <img ng-src="{{classified.item_image}}" class="media-object">
+  </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{classified.description}}</h4>
+      <a ui-sref="classifiedDetail({id: classified.id})">  {{classified.description}}</a>
+
+
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{classified.title}}
+      </h4>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{classified.price}}
+      </h4>
+    </div>
+</div>
+<!--write the template for post  -->
   <h1>Classified Revise</h1>
   <form action="POST">
     <label for="name"></label>

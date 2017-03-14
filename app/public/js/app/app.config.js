@@ -18,10 +18,9 @@
         component: 'app',
       })
       .state({
-        name: 'edit-classified',
-        parent: 'app',
-        url: '/posts/:id',
-        component: 'classifiedEdit',
+        name: 'classifiedDetail',
+        url: '/:id',
+        component: 'classifiedDetail'
       })
   }
 
