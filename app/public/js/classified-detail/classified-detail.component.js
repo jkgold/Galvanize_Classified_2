@@ -12,10 +12,18 @@
 
 
     vm.$onInit = onInit
+    vm.updateClassified = updateClassified
     // vm.patchClassified = patchClassified
 
     function onInit() {
       vm.id = $stateParams.id
     }
   }
+  function updateClassified(){
+    $http.patch(`/classifieds/${stateParams.id}`,vm.classified)
+    .then(response => {
+      $state.go('/:id')
+    })
+  }
+
 }())

@@ -41,13 +41,13 @@
       </h4>
     </div>
     <div class="media-body">
-      <h4 class="media-heading">
-        {{classified.price}}
-      </h4>
+      <h4 class="media-heading"></h4>
+      <a ui-sref="classifiedDetail({id: classified.description})">  {{classified.description}}</a>
+
     </div>
 </div>
 <!--write the template for post  -->
-  <h1>Classified Revise</h1>
+  <h1>Classified Edit</h1>
   <form action="POST">
     <label for="name"></label>
     <input type="classifiedInput" type ="text" name="classified">

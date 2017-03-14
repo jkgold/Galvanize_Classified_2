@@ -1,6 +1,28 @@
 <div class="page-header">
+    <h1>
+      {{$ctrl.classified.title}}
+    </h1>
+</div>
+    <form name="form" novalidate ng-submit=$ctrl.updateClassified()>
+        <label for="title">Title</label>
+        <input ng-model="$ctrl.classified.title">
+        <div>
+          <label for="id">ID</label>
+          <input class="form-control" name="id" required ng-model="$ctrl.id">
+        </div><br>
+        <!-- <div>
+          <label>Image URL</label>
+          <input class="form-control" name="item_image" required ng-model="$ctrl.classified.item_image">
+          </div><br>
+      <label for="name"></label>
+      <input type="classifiedInput" type ="text" name="classified">
+      <button id="editButton" type="button" name="button">EDIT</button>
+      <button id="deleteButton" type="button" name="button">DELETE</button> -->
+    </form>
+
   <h1>{{ $ctrl.id }}</h1>
-  <!-- <h1>
+
+  <h1>
     {{$ctrl.classified}}
-  </h1> -->
+  </h1>
 </div>
