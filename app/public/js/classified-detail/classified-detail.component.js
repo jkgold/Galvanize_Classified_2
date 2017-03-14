@@ -17,6 +17,13 @@
 
     function onInit() {
       vm.id = $stateParams.id
+      $http.get(`/classifieds/${$stateParams.id}`)
+      .then(response => {
+        console.log(response.data);
+        vm.classifiedResonse = response.data;
+
+      })
+
     }
   }
   function updateClassified(){
