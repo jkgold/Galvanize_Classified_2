@@ -22,10 +22,9 @@
     }
 
     function createClassified() {
-      // $http.post('/classifieds', vm.classified).then(function (response) {
-      //   vm.classifieds.push(response.data);
-      // });
-      console.log(vm.classified);
+      $http.post('/classifieds', vm.classified).then(function (response) {
+        vm.classifieds.push(response.data);
+      });
     }
   }
 })();
