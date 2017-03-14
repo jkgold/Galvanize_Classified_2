@@ -20,7 +20,7 @@
       $http.get(`/classifieds/${$stateParams.id}`)
       .then(response => {
         console.log(response.data);
-        vm.classifiedResonse = response.data;
+        vm.classifiedResponse = response.data;
 
       })
 
