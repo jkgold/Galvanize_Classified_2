@@ -12,14 +12,8 @@
 
     // different urls separate states of the application
     $stateProvider
-      // .state({
-      //   name: 'app',
-      //   abstract: true,
-      //   component: 'app',
-      // })
       .state({
         name: 'home',
-        // parent: 'app',
         url: '/',
         component: 'app',
       })
