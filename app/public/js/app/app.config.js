@@ -23,12 +23,12 @@
         url: '/',
         component: 'app',
       })
-      // .state({
-      //   name: 'editClassifiedState',
-      //   parent: 'app',
-      //   url: '/posts/:id/edit',
-      //   component: 'classifiedEdit',
-      // })
+      .state({
+        name: 'edit-classified',
+        parent: 'app',
+        url: '/posts/:id',
+        component: 'classifiedEdit',
+      })
   }
 
 }());

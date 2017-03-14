@@ -87,7 +87,7 @@ router.patch('/:id', (req, res, next) => {
       });
     });
 
-    router.delete('/:id', function(req, res, next)  {
+    router.delete('/:id', (req, res, next) => {
   let id = parseInt(req.params.id);
   let classified;
 

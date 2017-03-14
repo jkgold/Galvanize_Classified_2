@@ -5,9 +5,10 @@
     <img ng-src="{{classified.item_image}}" class="media-object">
   </div>
     <div class="media-body">
-      <h4 class="media-heading">
-        {{classified.description}}
-      </h4>
+      <h4 class="media-heading">{{classified.description}}</h4>
+      <a ui-sref="#">  {{classified.description}}</a>
+
+
     </div>
     <div class="media-body">
       <h4 class="media-heading">
@@ -45,3 +46,10 @@
     </button>
   </div>
 </form>
+  <h1>Classified Revise</h1>
+  <form action="POST">
+    <label for="name"></label>
+    <input type="classifiedInput" type ="text" name="classified">
+    <button id="editButton" type="button" name="button">EDIT</button>
+    <button id="deleteButton" type="button" name="button">DELETE</button>
+  </form>

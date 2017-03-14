@@ -27,11 +27,19 @@ function controller ($http) {
     // console.log("am i in function");
     console.log(vm.classified);
     $http.post('/classifieds', vm.classified).then(response => {
-      response.data.addclassifieds = []
+      // response.data.addclassifieds = []
       vm.classifieds.push(response.data)
       console.log(vm.classifieds);
 
   })
   }
+
+  function updateClassified() {
+    $http.patch(`/classifieds/${$stateParams.id}`)
+    .then (response => {
+      $state.go("home")
+    })
+  }
+
 }
 }());
